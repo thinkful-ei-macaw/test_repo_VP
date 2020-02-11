@@ -8,7 +8,7 @@ function createGreeting(name, age){
     }
 
 if (age < 0 ) {
-    thow new Error('Age cannot be negative.');
+    throw new Error('Age cannot be negative.');
 }
 
 if ( typeof age !== 'number'){
