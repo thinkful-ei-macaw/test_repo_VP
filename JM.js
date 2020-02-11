@@ -1,5 +1,5 @@
-function createGreeting() {
-return  'Hello, my name is Jesse Mathews.';
+function createGreeting( name, age) {
+return `Hello, my name is ${name} My age is ${age}` ;
 }
-const myvalue=createGreeting()
+const myvalue=createGreeting ("Penelope", 15)
 console.log(myvalue)
