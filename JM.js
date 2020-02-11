@@ -1,13 +1,25 @@
-function createGreeting( name, age) { 
-    const yob= getyearOfbirth(age)
-return `Hello, my name is ${name} My year of birth is ${yob}` ;
+function getyearOfbirth(age) { 
+    return 2020 - age;
 }
-const myvalue=createGreeting ("Penelope", -29)
-console.log(myvalue)
-function getyearOfbirth ( age){
-    if (age< 0){
-        throw new TypeError("arguments not invalid")
-        
+function createGreeting(name, age){
+    if ( name === undefined || age === undefined){
+        throw new Error ('Arguements not valid.');
     }
-    return 2020 - age
+if (age < 0 ) {
+    thow new Error('Age cannot be negative.');
+}
+if ( typeof age !== 'number'){
+    throw new TypeError ('Age must be a number');
+}
+const yob = getyearOfbirth(age);
+return `
+Hi, myy name is ${name} and I'm ${age} years old.
+I was born in ${yob}.
+`;
+}
+try {
+    const greeting1 = createGreeting ('Penelope',45)
+    console.log(greeting1);
+} catch(e){
+    console.error(e.message);
 }
