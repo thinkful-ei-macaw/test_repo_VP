@@ -17,7 +17,7 @@ if ( typeof age !== 'number'){
 
 const yob = getyearOfbirth(age);
 return `
-Hi, myy name is ${name} and I'm ${age} years old.
+Hi, my name is ${name} and I'm ${age} years old.
 I was born in ${yob}.
 `;
 }
